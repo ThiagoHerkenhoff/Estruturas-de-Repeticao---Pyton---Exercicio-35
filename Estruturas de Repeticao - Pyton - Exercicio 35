@@ -1,0 +1,20 @@
+# 35 - Faça um programa que some o números ímpares contidos em um intervalo definido pelo usuário.
+# O usuário define o valor inicial do intervalo e o valor inicial do intervalo e o programa deve somar
+# todos o números ímpares contidos netse intervalo. Caso o usuário digite um intervalo inválido
+# (começando por um intervalo maior que o final) deve ser escrito uma mensagem de erro na tela, "intervalo de
+# valores inválido" e o programa termina. Exemplo de tela de saída: digite o valor inicial e o valor final:
+# 5, 10, a soma dos ímpares neste intervalo: 21
+
+n1 = int(input('Informe o valor do inicio do intervalo: '))
+n2 = int(input('Informe o valor final do intervalo: '))
+impares = 0
+
+if n1 >= n2:
+    print("intervalo de valores inválido")
+
+else:
+    for i in range(n1, n2 + 1):
+        if i % 2 != 0:
+            impares = impares + i
+
+print(f'A soma dos dos ímpares deste intervalo é: {impares}')
